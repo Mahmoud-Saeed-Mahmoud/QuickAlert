@@ -5,12 +5,9 @@ import 'package:quickalert/models/quickalert_type.dart';
 class QuickAlertButtons extends StatelessWidget {
   final QuickAlertOptions options;
 
-  final ButtonStyle? cancelButtonStyle;
-
   const QuickAlertButtons({
     Key? key,
     required this.options,
-    this.cancelButtonStyle,
   }) : super(key: key);
 
   @override
@@ -71,7 +68,7 @@ class QuickAlertButtons extends StatelessWidget {
         options.type == QuickAlertType.confirm ? true : options.showCancelBtn!;
 
     final cancelBtn = buildButton(
-        cancelButtonStyle: cancelButtonStyle,
+        cancelButtonStyle: options.cancelButtonStyle,
         context: context,
         isOkayBtn: false,
         text: options.cancelBtnText!,
