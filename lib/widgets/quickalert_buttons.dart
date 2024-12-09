@@ -52,7 +52,7 @@ class QuickAlertButtons extends StatelessWidget {
       ),
     );
 
-    final cancelBtn = ElevatedButton(
+    final cancelBtn = TextButton(
       style: cancelButtonStyle,
       onPressed: onTap,
       child: Center(
